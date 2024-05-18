@@ -2,7 +2,7 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <title>NeverBored</title>
+        <title>NeverBored - Maja i Dominika</title>
         <link rel="stylesheet" href="api_style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
@@ -90,7 +90,7 @@
                 <div id="fill"></div>
             </article>
         </main>
-
+<script src="app.js"></script>
         <script>
             
             $("#activity1").hide();
@@ -172,7 +172,8 @@
                         let z = $(x).children().eq(0).text();
                         let z2 = z.split(' ');
                         console.log(z2[z2.length - 1]);
-                        const objectUrl = "https://pixabay.com/api/?key=40489592-8efeacaa8de91011aad87ca09&q=" + wyszukiwanie + "+" + z2[z2.length - 1] + "&image_type=photo";
+                        let klucz = "40489592-8efeacaa8de91011aad87ca09&q";
+                        const objectUrl = "https://pixabay.com/api/?key=" + API_KEY + "=" + wyszukiwanie + "+" + z2[z2.length - 1] + "&image_type=photo";
                             fetch(objectUrl).then(response =>{
                             return response.json(); 
                         }).then(data => {
