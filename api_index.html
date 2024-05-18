@@ -172,7 +172,7 @@
                         let z = $(x).children().eq(0).text();
                         let z2 = z.split(' ');
                         console.log(z2[z2.length - 1]);
-                        let klucz = "40489592-8efeacaa8de91011aad87ca09&q";
+                       
                         const objectUrl = "https://pixabay.com/api/?key=" + API_KEY + "=" + wyszukiwanie + "+" + z2[z2.length - 1] + "&image_type=photo";
                             fetch(objectUrl).then(response =>{
                             return response.json(); 
